@@ -1,34 +1,35 @@
 <?php
- 
-  $receiving_email_address = 'B.moyo@g7cargo.com';
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+$receiving_email_address = 'B.moyo@g7cargo.com';
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+if (file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php')) {
+    include($php_email_form);
+} else {
+    die('Unable to load the "PHP Email Form" Library!');
+}
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+$contact = new PHP_Email_Form;
+$contact->ajax = true;
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+$contact->to = $receiving_email_address;
+$contact->from_name = $_POST['name'];
+$contact->from_email = $_POST['email'];
+$contact->subject = 'Request for Quote';
 
-  echo $contact->send();
+// Collecting additional form fields
+$contact->add_message($_POST['name'], 'Name');
+$contact->add_message($_POST['company_name'], 'Company Name');
+$contact->add_message($_POST['email'], 'Email');
+$contact->add_message($_POST['telephone'], 'Telephone');
+$contact->add_message($_POST['collect_from_city'], 'Collect From City');
+$contact->add_message($_POST['collect_from_country'], 'Collect From Country');
+$contact->add_message($_POST['deliver_to_city'], 'Deliver To City');
+$contact->add_message($_POST['deliver_to_country'], 'Deliver To Country');
+$contact->add_message($_POST['method'], 'Shipping Method');
+$contact->add_message($_POST['total_packages'], 'Total Packages');
+$contact->add_message($_POST['package_1'], 'Package 1 Dimensions');
+$contact->add_message($_POST['commodity'], 'Commodity');
+$contact->add_message($_POST['other_details'], 'Other Details');
+
+echo $contact->send();
 ?>
