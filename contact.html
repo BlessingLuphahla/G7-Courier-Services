@@ -148,229 +148,30 @@
           <!-- End Google Maps -->
 
           <div class="col-lg-12">
-            <form action="forms/contact.php" method="post">
-              <div class="container py-4">
-                <!-- Your Details -->
-                <div class="row mb-3">
-                  <div class="col-12">
-                    <h4 class="text-warning">YOUR DETAILS:</h4>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="name" class="form-label">Name:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder=""
-                    />
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="companyName" class="form-label"
-                      >Company Name:</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="companyName"
-                      placeholder=""
-                    />
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder=""
-                    />
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="telephone" class="form-label">Telephone:</label>
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="telephone"
-                      placeholder=""
-                    />
-                  </div>
-                </div>
-
-                <!-- Collect and Deliver -->
-                <div class="row mb-3">
-                  <div class="col-md-6 mb-3">
-                    <label for="collectCity" class="form-label"
-                      >Collect From:</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      id="collectCity"
-                      placeholder="City"
-                    />
-                    <select class="form-select" id="collectCountry">
-                      <option selected>Country</option>
-                      <option value="1">UK</option>
-                      <option value="2">Zimbabwe</option>
-                      <option value="3">South Africa</option>
-                      <option value="4">Nigeria</option>
-                      <option value="5">Cameroon</option>
-                      <option value="6">Ghana</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="deliverCity" class="form-label text-warning"
-                      >Deliver To:</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      id="deliverCity"
-                      placeholder="City"
-                    />
-                    <select class="form-select" id="deliverCountry">
-                      <option selected>Country</option>
-                      <option value="1">UK</option>
-                      <option value="2">Zimbabwe</option>
-                      <option value="3">South Africa</option>
-                      <option value="4">Nigeria</option>
-                      <option value="5">Cameroon</option>
-                      <option value="6">Ghana</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Method -->
-                <div class="row mb-3">
-                  <div class="col-12">
-                    <h5 class="text-warning">Method:</h5>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="airFreight"
-                        value="air"
-                      />
-                      <label class="form-check-label" for="airFreight"
-                        >Air Freight</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="seaFreight"
-                        value="sea"
-                      />
-                      <label class="form-check-label" for="seaFreight"
-                        >Sea Freight</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="roadFreight"
-                        value="road"
-                      />
-                      <label class="form-check-label" for="roadFreight"
-                        >Road Freight</label
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Packages -->
-                <div class="row mb-3">
-                  <div class="col-12">
-                    <h5 class="text-warning">Packages:</h5>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="totalPackages" class="form-label"
-                      >Total Packages: (between 1 and 50)</label
-                    >
-                    <select class="form-select" id="totalPackages">
-                      <option selected>1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label class="form-label">Package 1</label>
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      placeholder="Length cm"
-                    />
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      placeholder="Width cm"
-                    />
-                    <input
-                      type="text"
-                      class="form-control mb-2"
-                      placeholder="Height cm"
-                    />
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Weight kg"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <button type="button" class="btn btn-warning w-100">
-                      Copy +
-                    </button>
-                  </div>
-                </div>
-
-                <!-- Total Pieces and Weight -->
-                <div class="row mb-3">
-                  <div class="col-md-6 text-center">
-                    <h6 class="text-dark">
-                      Total Pieces: <span class="text-warning">0</span>
-                    </h6>
-                  </div>
-                  <div class="col-md-6 text-center">
-                    <h6 class="text-dark">
-                      Total Weight: <span class="text-warning">0 kg</span>
-                    </h6>
-                  </div>
-                </div>
-
-                <!-- Commodity and Other Details -->
-                <div class="row mb-3">
-                  <div class="col-md-6 mb-3">
-                    <label for="commodity" class="form-label">Commodity:</label>
-                    <select class="form-select" id="commodity">
-                      <option selected>** Select Commodity **</option>
-                      <option value="1">Commodity 1</option>
-                      <option value="2">Commodity 2</option>
-                      <option value="3">Commodity 3</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="otherDetails" class="form-label"
-                      >Any Other Details:</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="otherDetails"
-                      rows="3"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Request A Quote -->
-                <div class="row">
-                  <div class="col-12">
-                    <button type="submit" class="btn btn-warning w-100">
-                      Request A Quote
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <iframe
+              id="JotFormIFrame-242305360454550"
+              title="G7 Courier Services"
+              onload="window.parent.scrollTo(0,0)"
+              allowtransparency="true"
+              allow="geolocation; microphone; camera; fullscreen"
+              src="https://form.jotform.com/242305360454550"
+              frameborder="0"
+              style="
+                min-width: 100%;
+                max-width: 100%;
+                height: 539px;
+                border: none;
+              "
+              scrolling="no"
+            >
+            </iframe>
+            <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+            <script>
+              window.jotformEmbedHandler(
+                "iframe[id='JotFormIFrame-242305360454550']",
+                "https://form.jotform.com/"
+              );
+            </script>
 
             <!-- End Contact Form -->
           </div>
